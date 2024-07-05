@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: springboot-nacos
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.21.11:8848
+        namespace: 45599888-84e1-429f-a951-51af630c5e4a
+  config:
+    import:
+      - nacos:springboot-nacos-${spring.profiles.active}.yaml?refreshEnabled=true
+  profiles:
+    active: asd
+server:
+  port: 18084
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
