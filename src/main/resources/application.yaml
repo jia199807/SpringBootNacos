@@ -12,7 +12,7 @@ spring:
   profiles:
     active: asd
 server:
-  port: 18084
+  port: 18083
 management:
   endpoints:
     web:
